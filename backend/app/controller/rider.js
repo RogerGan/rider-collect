@@ -7,13 +7,14 @@ class RiderController extends Controller {
     const pageSize = Math.min(100, Math.max(1, parseInt(ctx.query.pageSize || '20', 10)));
     const offset = (page - 1) * pageSize;
 
-    const where = 'is_deleted = 0';
-    const [ list, [{ total }] ] = await Promise.all([
-      app.mysql.select('riders', { where, limit: pageSize, offset, orders: [[ 'id', 'desc' ]] }),
-      app.mysql.query('SELECT COUNT(1) AS total FROM riders WHERE is_deleted = 0'),
-    ]);
-
-    ctx.body = { list, page, pageSize, total };
+    const Rider = app.model.Rider;
+    const { rows, count } = await Rider.findAndCountAll({
+      where: { is_deleted: 0 },
+      limit: pageSize,
+      offset,
+      order: [[ 'id', 'DESC' ]],
+    });
+    ctx.body = { list: rows, page, pageSize, total: count };
   }
 
   async show() {
@@ -21,7 +22,8 @@ class RiderController extends Controller {
     const id = parseInt(ctx.params.id, 10);
     if (!id) return ctx.throw(400, 'invalid id');
 
-    const rider = await app.mysql.get('riders', { id, is_deleted: 0 });
+    const Rider = app.model.Rider;
+    const rider = await Rider.findOne({ where: { id, is_deleted: 0 } });
     if (!rider) return ctx.throw(404, 'not found');
     ctx.body = rider;
   }
@@ -59,11 +61,12 @@ class RiderController extends Controller {
       is_deleted: 0,
     };
 
-    const exist = await app.mysql.get('riders', { phone: data.phone, id_number: data.id_number, is_deleted: 0 });
+    const Rider = app.model.Rider;
+    const exist = await Rider.findOne({ where: { phone: data.phone, id_number: data.id_number, is_deleted: 0 } });
     if (exist) return ctx.throw(409, 'duplicated rider');
 
-    const res = await app.mysql.insert('riders', data);
-    ctx.body = { id: res.insertId };
+    const res = await Rider.create(data);
+    ctx.body = { id: res.id };
   }
 }
 

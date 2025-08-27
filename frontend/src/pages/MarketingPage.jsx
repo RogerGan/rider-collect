@@ -1,4 +1,5 @@
 import './marketing.css';
+import { Link } from 'react-router-dom';
 
 export default function MarketingPage() {
   return (
@@ -7,7 +8,7 @@ export default function MarketingPage() {
         <div className="mk-hero-left">
           <h1>骑手专属通信优惠</h1>
           <p>为外卖骑手提供更稳定、更划算的通信服务。开卡即享专属权益。</p>
-          <a href="/" className="mk-cta">立即登记开卡</a>
+          <Link to="/" className="mk-cta">立即登记开卡</Link>
         </div>
         <div className="mk-hero-right">
           <img src="/assets/hero-rider.svg" alt="骑手形象" />
@@ -26,7 +27,7 @@ export default function MarketingPage() {
           <p>骑手专属套餐，话费更省，流量更足。</p>
         </div>
         <div className="mk-feature">
-          <img src="/assets/feature-service.svg" alt="快速服务" />
+          <img src="/assets/react.svg" alt="快速服务" />
           <h3>快速服务</h3>
           <p>登记即办，线上提交，最快当天开通。</p>
         </div>

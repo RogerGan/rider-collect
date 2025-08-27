@@ -1,0 +1,303 @@
+{
+  "keys": "/Users/ali/rider-collect/backend/config/config.default.js",
+  "security": {
+    "csrf": {
+      "enable": "/Users/ali/rider-collect/backend/config/config.default.js",
+      "type": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "rotateWhenInvalid": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "cookieOptions": {
+        "signed": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+      }
+    },
+    "domainWhiteList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "hostnameExceptionList": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "credentials": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "allowMethods": "/Users/ali/rider-collect/backend/config/config.default.js"
+  },
+  "sequelize": {
+    "dialect": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "host": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "port": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "database": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "username": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "password": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "timezone": "/Users/ali/rider-collect/backend/config/config.default.js",
+    "define": {
+      "freezeTableName": "/Users/ali/rider-collect/backend/config/config.default.js",
+      "underscored": "/Users/ali/rider-collect/backend/config/config.default.js",
+      "timestamps": "/Users/ali/rider-collect/backend/config/config.default.js"
+    },
+    "dialectOptions": "/Users/ali/rider-collect/backend/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/ali/rider-collect/backend/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/ali/rider-collect/backend/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/ali/rider-collect/backend/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/ali/rider-collect/backend/node_modules/egg-session/config/config.default.js",
+    "logValue": "/Users/ali/rider-collect/backend/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/ali/rider-collect/backend/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/ali/rider-collect/backend/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/ali/rider-collect/backend/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/ali/rider-collect/backend/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/ali/rider-collect/backend/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/ali/rider-collect/backend/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/ali/rider-collect/backend/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/ali/rider-collect/backend/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/ali/rider-collect/backend/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/ali/rider-collect/backend/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/ali/rider-collect/backend/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/ali/rider-collect/backend/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/ali/rider-collect/backend/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/ali/rider-collect/backend/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "defaultParamCharset": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/Users/ali/rider-collect/backend/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/Users/ali/rider-collect/backend/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/ali/rider-collect/backend/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js",
+    "dir": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/ali/rider-collect/backend/node_modules/egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/ali/rider-collect/backend/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/ali/rider-collect/backend/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/ali/rider-collect/backend/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/ali/rider-collect/backend/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/ali/rider-collect/backend/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "name": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "version": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "private": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "dev": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "start": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "stop": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "egg": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "mysql2": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "baseDir": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "timing": {
+      "slowBootActionMinDuration": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "cacheControl": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "strict": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "depth": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "env": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "level": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "enableFastContextLogger": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    },
+    "useHttpClientNext": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "meta": {
+    "enable": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "logging": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "port": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/ali/rider-collect/backend/node_modules/egg/config/config.default.js"
+}
