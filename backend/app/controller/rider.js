@@ -1,6 +1,8 @@
+// Rider 数据控制器：提供列表查询、详情、创建与更新能力
 const Controller = require('egg').Controller;
 
 class RiderController extends Controller {
+  // 列表查询：支持分页与多条件筛选（keyword/city/status/shipping_status/logistics_status）
   async index() {
     const { ctx, app } = this;
     const page = Math.max(1, parseInt(ctx.query.page || '1', 10));
@@ -32,6 +34,7 @@ class RiderController extends Controller {
     ctx.body = { list: rows, page, pageSize, total: count };
   }
 
+  // 详情：按 ID 查询未删除数据
   async show() {
     const { ctx, app } = this;
     const id = parseInt(ctx.params.id, 10);
@@ -43,6 +46,7 @@ class RiderController extends Controller {
     ctx.body = rider;
   }
 
+  // 新增：基础字段校验 + 去重（phone + id_number）
   async create() {
     const { ctx, app } = this;
     const body = ctx.request.body || {};
@@ -87,6 +91,7 @@ class RiderController extends Controller {
     ctx.body = { id: res.id };
   }
 
+  // 更新：允许后台修改基础信息与状态字段
   async update() {
     const { ctx, app } = this;
     const id = parseInt(ctx.params.id, 10);

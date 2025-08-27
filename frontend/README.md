@@ -1,12 +1,34 @@
-# React + Vite
+# Frontend (C 端)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+单页应用，包含营销信息与骑手信息提交表单，面向手机端布局。
 
-Currently, two official plugins are available:
+## 目录
+- `src/App.jsx` 单页：营销区块 + 表单 + 最近提交
+- `src/pages/marketing.css` 营销样式（部分组件复用）
+- `src/index.css` Vite 模板基础样式
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 启动
+```bash
+npm i
+npm run dev
+```
 
-## Expanding the ESLint configuration
+默认接口地址：`http://localhost:7001`（见 `src/pages/FormPage.jsx` 与 `src/App.jsx` 中的 `API_BASE`）。
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 开发提示
+- 表单校验：提交前校验 `姓名`、`手机号`、`证件号`，勾选 `agree` 才能提交。
+- 成功后重置表单并刷新“最近提交”。
+- 若后端地址变动，修改 `API_BASE` 即可。
+
+## 文件说明
+- `src/App.jsx`
+  - 合并营销与表单为一个页面，移动端优先布局
+  - 封装 `submit`、`loadList` 等数据请求逻辑
+  - 最近提交表格在小屏下支持横向滚动
+- `src/pages/marketing.css`
+  - 营销区块卡片、按钮等样式
+
+## TODO（可选）
+- 隐私协议弹窗与勾选明示
+- 表单草稿自动保存（localStorage）
+- 异常态与网络错误的统一提示

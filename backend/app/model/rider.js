@@ -2,6 +2,7 @@
 
 module.exports = app => {
   const { STRING, INTEGER, DATE, TEXT } = app.Sequelize;
+  // Sequelize 模型：映射至 riders 表
   const Rider = app.model.define('riders', {
     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
     name: STRING(50),

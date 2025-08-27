@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Layout, Table, Input, Select, Space, Button, Drawer, Form, message, Tag, theme } from 'antd';
 
 const { Header, Content } = Layout;
+// 后端接口基地址（开发环境）。如需部署跨域，请在后端 CORS 放行。
 const API_BASE = 'http://localhost:7001';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
 
   useEffect(() => { load(1, pageSize); }, [filters]);
 
+  // 表格列配置
   const columns = [
     { title: 'ID', dataIndex: 'id', width: 70 },
     { title: '姓名', dataIndex: 'name' },

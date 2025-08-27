@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
+// 营销区块与按钮样式（移动端友好）
 import './pages/marketing.css';
 
+// 后端接口基地址（开发环境）
 const API_BASE = 'http://localhost:7001';
 
 export default function App() {
@@ -22,6 +24,7 @@ export default function App() {
   const [err, setErr] = useState('');
   const [ok, setOk] = useState('');
 
+  // 提交条件：基础校验 + 已勾选协议 + 非加载状态
   const canSubmit = useMemo(() => {
     return form.name && /^1\d{10}$/.test(form.phone) && /^[0-9A-Za-z]{6,40}$/.test(form.id_number) && form.agree && !loading;
   }, [form, loading]);
@@ -31,6 +34,7 @@ export default function App() {
     setForm(s => ({ ...s, [name]: type === 'checkbox' ? checked : value }));
   };
 
+  // 提交表单：成功后刷新列表并重置表单
   const submit = async e => {
     e.preventDefault();
     setErr('');
@@ -70,6 +74,7 @@ export default function App() {
     }
   };
 
+  // 加载最近提交：仅取前 10 条，便于演示
   const loadList = async () => {
     const res = await fetch(`${API_BASE}/api/riders?page=1&pageSize=10`);
     const data = await res.json();

@@ -31,3 +31,12 @@
 2025-08-27 21:43:20,099 INFO 88407 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
 2025-08-27 21:43:20,099 INFO 88407 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
 2025-08-27 21:43:20,099 INFO 88407 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2025-08-27 22:09:11,519 INFO 5096 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2025-08-27 22:09:11,519 INFO 5096 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2025-08-27 22:09:11,519 INFO 5096 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2025-08-27 22:09:20,150 INFO 5205 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2025-08-27 22:09:20,150 INFO 5205 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2025-08-27 22:09:20,150 INFO 5205 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2025-08-27 22:09:57,977 INFO 5613 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2025-08-27 22:09:57,977 INFO 5613 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2025-08-27 22:09:57,977 INFO 5613 [egg-schedule]: register schedule /Users/ali/rider-collect/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
