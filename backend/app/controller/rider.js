@@ -8,8 +8,23 @@ class RiderController extends Controller {
     const offset = (page - 1) * pageSize;
 
     const Rider = app.model.Rider;
+    const { Op } = app.Sequelize;
+    const where = { is_deleted: 0 };
+    if (ctx.query.keyword) {
+      const kw = `%${ctx.query.keyword.trim()}%`;
+      where[Op.or] = [
+        { name: { [Op.like]: kw } },
+        { phone: { [Op.like]: kw } },
+        { id_number: { [Op.like]: kw } },
+      ];
+    }
+    if (ctx.query.city) where.city = ctx.query.city;
+    if (ctx.query.status) where.status = ctx.query.status;
+    if (ctx.query.shipping_status) where.shipping_status = ctx.query.shipping_status;
+    if (ctx.query.logistics_status) where.logistics_status = ctx.query.logistics_status;
+
     const { rows, count } = await Rider.findAndCountAll({
-      where: { is_deleted: 0 },
+      where,
       limit: pageSize,
       offset,
       order: [[ 'id', 'DESC' ]],
@@ -56,6 +71,9 @@ class RiderController extends Controller {
       emergency_phone: (body.emergency_phone || '').trim(),
       note: (body.note || '').trim(),
       agree: body.agree ? 1 : 0,
+      status: (body.status || 'new').trim(),
+      shipping_status: (body.shipping_status || 'pending').trim(),
+      logistics_status: (body.logistics_status || 'pending').trim(),
       created_at: now,
       updated_at: now,
       is_deleted: 0,
@@ -67,6 +85,24 @@ class RiderController extends Controller {
 
     const res = await Rider.create(data);
     ctx.body = { id: res.id };
+  }
+
+  async update() {
+    const { ctx, app } = this;
+    const id = parseInt(ctx.params.id, 10);
+    if (!id) return ctx.throw(400, 'invalid id');
+    const body = ctx.request.body || {};
+    const Rider = app.model.Rider;
+    const rider = await Rider.findByPk(id);
+    if (!rider || rider.is_deleted) return ctx.throw(404, 'not found');
+
+    const updatable = [ 'name','phone','id_number','city','address','carrier_pref','vehicle_type','emergency_name','emergency_phone','note','agree','status','shipping_status','logistics_status' ];
+    const data = {};
+    for (const k of updatable) if (k in body) data[k] = body[k];
+    data.updated_at = new Date();
+    await Rider.update(data, { where: { id } });
+    const latest = await Rider.findByPk(id);
+    ctx.body = latest;
   }
 }
 

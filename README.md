@@ -4,7 +4,8 @@
 
 ## 目录结构
 - `backend/` Egg.js 服务端，提供骑手信息 API
-- `frontend/` React 前端，包含信息收集表单与营销活动页
+- `frontend/` React 前端（C 端），包含信息收集表单与营销活动
+- `admin/` React + Ant Design 管理后台（B 端）
 - `db/schema.sql` 数据库建表脚本
 
 ## 本地运行
@@ -28,14 +29,22 @@ npm i
 npm run dev
 ```
 
-4) 访问
-- 表单页: `http://localhost:5173/`
-- 营销页: `http://localhost:5173/marketing`
+4) 启动后台（端口 5174）
+```bash
+cd ../admin
+npm i
+npm run dev
+```
+
+5) 访问
+- C 端: `http://localhost:5173/`
+- B 端: `http://localhost:5174/`
 
 ## 接口说明
 - POST `http://localhost:7001/api/riders` 新增
-- GET `http://localhost:7001/api/riders` 列表
+- GET `http://localhost:7001/api/riders` 列表（支持 page、pageSize、keyword、city、status、shipping_status、logistics_status）
 - GET `http://localhost:7001/api/riders/:id` 详情
+- PUT `http://localhost:7001/api/riders/:id` 更新（用于后台编辑）
 
 ## 环境要求
 - Node.js 16+
