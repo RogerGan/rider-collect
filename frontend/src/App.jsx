@@ -89,9 +89,9 @@ export default function App() {
     <div className="mk-wrap" style={{ maxWidth: 560, margin: '0 auto' }}>
       <section className="mk-hero" style={{ padding: '24px 16px' }}>
         <div className="mk-hero-left" style={{ flex: 1 }}>
-          <h1 style={{ fontSize: 28 }}>骑手专属通信优惠</h1>
-          <p style={{ fontSize: 14, color: '#555' }}>为外卖骑手提供稳定、划算的通信服务。登记即可享权益。</p>
-          <a href="#form" className="mk-cta" style={{ padding: '10px 14px', fontSize: 14 }}>立即登记开卡</a>
+          <h1 style={{ fontSize: 28 }}>🚴‍♂️ 骑手专属通信优惠</h1>
+          <p style={{ fontSize: 14, color: '#555' }}>为外卖骑手量身定制的稳定、划算通信服务。立即登记，专享超值权益！</p>
+          <a href="#form" className="mk-cta" style={{ padding: '10px 14px', fontSize: 14 }}>🎯 立即登记开卡</a>
         </div>
         <div className="mk-hero-right" style={{ display: 'none' }}>
           <img src="/assets/hero-rider.svg" alt="骑手形象" />
@@ -102,12 +102,12 @@ export default function App() {
         <div className="mk-feature">
           <img src="/assets/feature-signal.svg" alt="信号稳定" />
           <h3 style={{ margin: 6 }}>信号稳定</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>城市广覆盖，配送不担心掉线。</p>
+          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>城市广覆盖，配送路上信号满格不掉线。</p>
         </div>
         <div className="mk-feature">
           <img src="/assets/feature-price.svg" alt="资费优惠" />
           <h3 style={{ margin: 6 }}>资费优惠</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>专属套餐，更省话费更多流量。</p>
+          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>骑手专属套餐，省钱省心，流量充足。</p>
         </div>
         <div className="mk-feature">
           <img src="/assets/react.svg" alt="快速服务" />
