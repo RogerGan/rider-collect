@@ -21,6 +21,17 @@ export default function App() {
   });
   const [loading, setLoading] = useState(false);
   const [list, setList] = useState([]);
+  const [showCustomerService, setShowCustomerService] = useState(false);
+  const [ticketForm, setTicketForm] = useState({
+    title: '',
+    description: '',
+    contact_name: '',
+    contact_phone: '',
+    contact_email: '',
+    category: 'general',
+    priority: 'normal'
+  });
+  const [ticketLoading, setTicketLoading] = useState(false);
   const [err, setErr] = useState('');
   const [ok, setOk] = useState('');
 
@@ -79,6 +90,44 @@ export default function App() {
     const res = await fetch(`${API_BASE}/api/riders?page=1&pageSize=10`);
     const data = await res.json();
     setList(data.list || []);
+  };
+
+  const onTicketChange = (e) => {
+    const { name, value } = e.target;
+    setTicketForm(prev => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmitTicket = async (e) => {
+    e.preventDefault();
+    if (!ticketForm.title || !ticketForm.description || !ticketForm.contact_name || !ticketForm.contact_phone) return;
+    setTicketLoading(true);
+    try {
+      const res = await fetch(`${API_BASE}/api/tickets`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(ticketForm),
+      });
+      if (res.ok) {
+        alert('工单提交成功！我们会尽快联系您。');
+        setTicketForm({
+          title: '',
+          description: '',
+          contact_name: '',
+          contact_phone: '',
+          contact_email: '',
+          category: 'general',
+          priority: 'normal'
+        });
+        setShowCustomerService(false);
+      } else {
+        const text = await res.text();
+        alert(text || '提交失败，请稍后重试');
+      }
+    } catch {
+      alert('网络错误，请稍后重试');
+    } finally {
+      setTicketLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -221,7 +270,69 @@ export default function App() {
         </div>
       </section>
 
-      
+      {showCustomerService && (
+        <div className="mk-customer-service-modal">
+          <div className="mk-customer-service-content">
+            <div className="mk-customer-service-header">
+              <h3>💬 联系客服</h3>
+              <button className="mk-close-btn" onClick={() => setShowCustomerService(false)}>×</button>
+            </div>
+            <form onSubmit={onSubmitTicket}>
+              <div className="mk-form-row">
+                <label>
+                  <span>问题标题 *</span>
+                  <input name="title" value={ticketForm.title} onChange={onTicketChange} placeholder="请简要描述您的问题" required />
+                </label>
+              </div>
+              <label>
+                <span>问题描述 *</span>
+                <textarea name="description" value={ticketForm.description} onChange={onTicketChange} placeholder="请详细描述您遇到的问题" rows="4" required></textarea>
+              </label>
+              <div className="mk-form-row">
+                <label>
+                  <span>联系人 *</span>
+                  <input name="contact_name" value={ticketForm.contact_name} onChange={onTicketChange} placeholder="您的姓名" required />
+                </label>
+                <label>
+                  <span>联系电话 *</span>
+                  <input name="contact_phone" value={ticketForm.contact_phone} onChange={onTicketChange} placeholder="手机号码" required />
+                </label>
+              </div>
+              <label>
+                <span>邮箱（可选）</span>
+                <input name="contact_email" value={ticketForm.contact_email} onChange={onTicketChange} placeholder="邮箱地址" />
+              </label>
+              <div className="mk-form-row">
+                <label>
+                  <span>问题类型</span>
+                  <select name="category" value={ticketForm.category} onChange={onTicketChange}>
+                    <option value="general">一般咨询</option>
+                    <option value="technical">技术问题</option>
+                    <option value="billing">费用问题</option>
+                    <option value="complaint">投诉建议</option>
+                  </select>
+                </label>
+                <label>
+                  <span>紧急程度</span>
+                  <select name="priority" value={ticketForm.priority} onChange={onTicketChange}>
+                    <option value="low">低</option>
+                    <option value="normal">普通</option>
+                    <option value="high">高</option>
+                    <option value="urgent">紧急</option>
+                  </select>
+                </label>
+              </div>
+              <button type="submit" disabled={ticketLoading}>
+                {ticketLoading ? '提交中...' : '提交工单'}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      <button className="mk-customer-service-btn" onClick={() => setShowCustomerService(true)}>
+        💬 客服
+      </button>
     </div>
   );
 }

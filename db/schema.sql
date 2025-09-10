@@ -21,3 +21,22 @@ CREATE TABLE IF NOT EXISTS riders (
   KEY idx_phone (phone),
   KEY idx_idn (id_number)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS tickets (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  title VARCHAR(100) NOT NULL,
+  description TEXT NOT NULL,
+  contact_name VARCHAR(50) NOT NULL,
+  contact_phone VARCHAR(20) NOT NULL,
+  contact_email VARCHAR(100) DEFAULT '',
+  category VARCHAR(30) DEFAULT 'general',
+  priority VARCHAR(20) DEFAULT 'normal',
+  status VARCHAR(20) DEFAULT 'new',
+  admin_reply TEXT,
+  is_deleted TINYINT(1) NOT NULL DEFAULT 0,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
+  PRIMARY KEY (id),
+  KEY idx_status (status),
+  KEY idx_contact_phone (contact_phone)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
