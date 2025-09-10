@@ -1,0 +1,16 @@
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <rect width="96" height="96" rx="16" fill="#fff3e0"/>
+  <g fill="none" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round">
+    <!-- Bike frame -->
+    <path d="M20 70h56"/>
+    <path d="M30 70V50h20l8 20"/>
+    <path d="M48 50h8v8"/>
+    <!-- Wheels -->
+    <circle cx="25" cy="70" r="8"/>
+    <circle cx="71" cy="70" r="8"/>
+    <!-- Delivery box -->
+    <rect x="60" y="40" width="16" height="12" rx="2" fill="#ff6b6b" fill-opacity="0.2"/>
+    <!-- Rider -->
+    <circle cx="40" cy="35" r="6" fill="#ff6b6b" fill-opacity="0.3"/>
+  </g>
+</svg>
