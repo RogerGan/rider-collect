@@ -86,127 +86,138 @@ export default function App() {
   }, []);
 
   return (
-    <div className="mk-wrap" style={{ maxWidth: 560, margin: '0 auto' }}>
-      <section className="mk-hero" style={{ padding: '24px 16px' }}>
-        <div className="mk-hero-left" style={{ flex: 1 }}>
-          <h1 style={{ fontSize: 28 }}>🚴‍♂️ 骑手专属通信优惠</h1>
-          <p style={{ fontSize: 14, color: '#555' }}>为外卖骑手量身定制的稳定、划算通信服务。立即登记，专享超值权益！</p>
-          <a href="#form" className="mk-cta" style={{ padding: '10px 14px', fontSize: 14 }}>🎯 立即登记开卡</a>
+    <div className="mk-wrap">
+      <section className="mk-hero">
+        <div className="mk-hero-left">
+          <h1>🚴‍♂️ 骑手专属通信优惠</h1>
+          <p>为外卖骑手量身定制的稳定、划算通信服务。立即登记，专享超值权益！</p>
+          <a href="#form" className="mk-cta">🎯 立即登记开卡</a>
         </div>
-        <div className="mk-hero-right" style={{ display: 'none' }}>
+        <div className="mk-hero-right">
           <img src="/assets/hero-rider.svg" alt="骑手形象" />
         </div>
       </section>
 
-      <section className="mk-features" style={{ gridTemplateColumns: '1fr', gap: 12, padding: '0 16px 8px' }}>
+      <section className="mk-features">
         <div className="mk-feature">
           <img src="/assets/feature-signal.svg" alt="信号稳定" />
-          <h3 style={{ margin: 6 }}>信号稳定</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>城市广覆盖，配送路上信号满格不掉线。</p>
+          <h3>信号稳定</h3>
+          <p>城市广覆盖，配送路上信号满格不掉线。</p>
         </div>
         <div className="mk-feature">
           <img src="/assets/feature-price.svg" alt="资费优惠" />
-          <h3 style={{ margin: 6 }}>资费优惠</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>骑手专属套餐，省钱省心，流量充足。</p>
+          <h3>资费优惠</h3>
+          <p>骑手专属套餐，省钱省心，流量充足。</p>
         </div>
         <div className="mk-feature">
           <img src="/assets/react.svg" alt="快速服务" />
-          <h3 style={{ margin: 6 }}>快速服务</h3>
-          <p style={{ margin: 0, fontSize: 13, color: '#555' }}>登记即办，线上提交，最快当天开通。</p>
+          <h3>快速服务</h3>
+          <p>登记即办，线上提交，最快当天开通。</p>
         </div>
       </section>
 
-      <section id="form" style={{ padding: '12px 16px 24px' }}>
-        <h2 style={{ fontSize: 20, margin: '8px 0 12px' }}>外卖骑手信息登记</h2>
-        {err && <div style={{ color: '#b00020', marginBottom: 8, fontSize: 14 }}>{err}</div>}
-        {ok && <div style={{ color: '#0a7', marginBottom: 8, fontSize: 14 }}>{ok}</div>}
-        <form onSubmit={submit} style={{ display: 'grid', gap: 10 }}>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>姓名</span>
-            <input name="name" value={form.name} onChange={onChange} required placeholder="姓名" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
-          </label>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>手机号</span>
-            <input name="phone" value={form.phone} onChange={onChange} required placeholder="11位手机号" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
-          </label>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>身份证号/编号</span>
-            <input name="id_number" value={form.id_number} onChange={onChange} required placeholder="6-40位字母数字" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
-          </label>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-            <label style={{ display: 'grid', gap: 6 }}>
-              <span style={{ fontSize: 14 }}>城市</span>
-              <input name="city" value={form.city} onChange={onChange} placeholder="城市" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
+      <section className="mk-steps">
+        <h2>开卡流程</h2>
+        <ol>
+          <li>在线提交信息</li>
+          <li>客服确认与审核</li>
+          <li>线下或邮寄开卡</li>
+        </ol>
+      </section>
+
+      <section id="form" className="mk-form-section">
+        <div className="mk-form-container">
+          <h2>外卖骑手信息登记</h2>
+          {err && <div className="mk-error">{err}</div>}
+          {ok && <div className="mk-success">{ok}</div>}
+          <form onSubmit={submit}>
+            <label>
+              <span>姓名</span>
+              <input name="name" value={form.name} onChange={onChange} required placeholder="姓名" />
             </label>
-            <label style={{ display: 'grid', gap: 6 }}>
-              <span style={{ fontSize: 14 }}>运营商意向</span>
-              <select name="carrier_pref" value={form.carrier_pref} onChange={onChange} style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }}>
-                <option value="移动">移动</option>
-                <option value="联通">联通</option>
-                <option value="电信">电信</option>
+            <label>
+              <span>手机号</span>
+              <input name="phone" value={form.phone} onChange={onChange} required placeholder="11位手机号" />
+            </label>
+            <label>
+              <span>身份证号/编号</span>
+              <input name="id_number" value={form.id_number} onChange={onChange} required placeholder="6-40位字母数字" />
+            </label>
+            <div className="mk-form-row">
+              <label>
+                <span>城市</span>
+                <input name="city" value={form.city} onChange={onChange} placeholder="城市" />
+              </label>
+              <label>
+                <span>运营商意向</span>
+                <select name="carrier_pref" value={form.carrier_pref} onChange={onChange}>
+                  <option value="移动">移动</option>
+                  <option value="联通">联通</option>
+                  <option value="电信">电信</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              <span>地址</span>
+              <input name="address" value={form.address} onChange={onChange} placeholder="送货/收货地址" />
+            </label>
+            <label>
+              <span>车辆类型</span>
+              <select name="vehicle_type" value={form.vehicle_type} onChange={onChange}>
+                <option value="电动车">电动车</option>
+                <option value="摩托车">摩托车</option>
+                <option value="自行车">自行车</option>
+                <option value="步行">步行</option>
               </select>
             </label>
-          </div>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>地址</span>
-            <input name="address" value={form.address} onChange={onChange} placeholder="送货/收货地址" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
-          </label>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>车辆类型</span>
-            <select name="vehicle_type" value={form.vehicle_type} onChange={onChange} style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }}>
-              <option value="电动车">电动车</option>
-              <option value="摩托车">摩托车</option>
-              <option value="自行车">自行车</option>
-              <option value="步行">步行</option>
-            </select>
-          </label>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-            <label style={{ display: 'grid', gap: 6 }}>
-              <span style={{ fontSize: 14 }}>紧急联系人</span>
-              <input name="emergency_name" value={form.emergency_name} onChange={onChange} placeholder="可选" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
+            <div className="mk-form-row">
+              <label>
+                <span>紧急联系人</span>
+                <input name="emergency_name" value={form.emergency_name} onChange={onChange} placeholder="可选" />
+              </label>
+              <label>
+                <span>紧急联系人电话</span>
+                <input name="emergency_phone" value={form.emergency_phone} onChange={onChange} placeholder="可选" />
+              </label>
+            </div>
+            <label>
+              <span>备注</span>
+              <textarea name="note" value={form.note} onChange={onChange} rows={3} placeholder="可选" />
             </label>
-            <label style={{ display: 'grid', gap: 6 }}>
-              <span style={{ fontSize: 14 }}>紧急联系人电话</span>
-              <input name="emergency_phone" value={form.emergency_phone} onChange={onChange} placeholder="可选" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
+            <label className="mk-checkbox-label">
+              <input type="checkbox" name="agree" checked={form.agree} onChange={onChange} />
+              我已阅读并同意隐私协议
             </label>
-          </div>
-          <label style={{ display: 'grid', gap: 6 }}>
-            <span style={{ fontSize: 14 }}>备注</span>
-            <textarea name="note" value={form.note} onChange={onChange} rows={3} placeholder="可选" style={{ padding: 10, borderRadius: 8, border: '1px solid #ddd' }} />
-          </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14 }}>
-            <input type="checkbox" name="agree" checked={form.agree} onChange={onChange} />
-            我已阅读并同意隐私协议
-          </label>
-          <button type="submit" disabled={!canSubmit} className="mk-cta" style={{ padding: '12px 16px', fontSize: 16, textAlign: 'center' }}>
-            {loading ? '提交中...' : '提交'}
-          </button>
-        </form>
+            <button type="submit" disabled={!canSubmit}>
+              {loading ? '提交中...' : '提交'}
+            </button>
+          </form>
 
-        <h3 style={{ marginTop: 20, fontSize: 16 }}>最近提交</h3>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-            <thead>
-              <tr>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>姓名</th>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>手机号</th>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>身份证</th>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>运营商</th>
-                <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>城市</th>
-              </tr>
-            </thead>
-            <tbody>
-              {list.map(r => (
-                <tr key={r.id}>
-                  <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.name}</td>
-                  <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.phone}</td>
-                  <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.id_number}</td>
-                  <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.carrier_pref}</td>
-                  <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.city}</td>
+          <h3 style={{ marginTop: 20, fontSize: 16 }}>最近提交</h3>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>姓名</th>
+                  <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>手机号</th>
+                  <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>身份证</th>
+                  <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>运营商</th>
+                  <th style={{ textAlign: 'left', borderBottom: '1px solid #eee', padding: 6 }}>城市</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {list.map(r => (
+                  <tr key={r.id}>
+                    <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.name}</td>
+                    <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.phone}</td>
+                    <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.id_number}</td>
+                    <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.carrier_pref}</td>
+                    <td style={{ borderBottom: '1px solid #f6f6f6', padding: 6 }}>{r.city}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
